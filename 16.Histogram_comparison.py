@@ -32,13 +32,13 @@ str_method = ""
 for method in methods:
     src1_src2 = cv.compareHist(hist1, hist2, method)
     src3_src4 = cv.compareHist(hist3, hist4, method)
-    if method == cv.HISTCMP_CORREL:
+    if method == cv.HISTCMP_CORREL: #computes corrln bw 2 histograms
         str_method = "Correlation"
-    if method == cv.HISTCMP_CHISQR:
+    if method == cv.HISTCMP_CHISQR: #applies chi-squared dist
         str_method = "Chi-square"
-    if method == cv.HISTCMP_INTERSECT:
+    if method == cv.HISTCMP_INTERSECT: # intersection between 2 histograms
         str_method = "Intersection"
-    if method == cv.HISTCMP_BHATTACHARYYA:
+    if method == cv.HISTCMP_BHATTACHARYYA: #measure overlap bw 2 histograms
         str_method = "Bhattacharyya"
 
     print("%s src1_src2 = %.2f, src3_src4 = %.2f"%(str_method, src1_src2, src3_src4))
